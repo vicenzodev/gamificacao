@@ -7,7 +7,7 @@ header {
     flex-direction: row;
     align-items: center;
     background: var(--footer-color);
-    justify-content: space-between;
+    justify-content: space-around;
     height: 3em;
     /* border: 10px solid var(--footer-color); */
     border-radius: 0px 0px 16px 16px;
@@ -42,7 +42,7 @@ header {
 }
 
 .xp_bar{
-    width: 50px;
+    width: 100px;
     height: 1em;
     background-color: var(--xp-bar-color);
     border-radius: 0.5em;
