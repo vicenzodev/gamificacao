@@ -10,13 +10,13 @@
 <body>
 	<?php
 		$url = isset($_GET['url']) ? $_GET['url'] : 'atividades';//Carregamento da url na variável de mesmo nome
-		include('src/pages/header.php');
-		if(file_exists('src/pages/'.$url.'.php')){
-			include('src/pages/'.$url.'.php');//Página encontrada e incluída no site
+		include(PATH.'src/pages/header.php');
+		if(file_exists(PATH.'src/pages/'.$url.'.php')){
+			include(PATH.'src/pages/'.$url.'.php');//Página encontrada e incluída no site
 		}else{
-			include('src/pages/404.php');//Página não encontrada
+			include(PATH.'src/pages/404.php');//Página não encontrada
 		}
-		include('src/pages/footer.php');
+		include(PATH.'src/pages/footer.php');
 	?>
 </body>
 </html>
