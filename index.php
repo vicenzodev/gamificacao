@@ -1,3 +1,4 @@
+<?php include('src/config.php');?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,14 +8,15 @@
 	<link rel="stylesheet" type="text/css" href="sytle/style.css">
 </head>
 <body>
-	<header>
-	</header>
-	<div class="container">
-		<div class="map">
-			<div class="atv">
-				<a href="/atividade1"><h2 class="titulo">Atividade 1</h2></a>
-			</div><!--atv-->
-		</div><!--map-->
-	</div><!--container-->
+	<?php
+		$url = isset($_GET['url']) ? $_GET['url'] : 'atividades';//Carregamento da url na variável de mesmo nome
+		include('src/pages/header.php');
+		if(file_exists('src/pages/'.$url.'.php')){
+			include('src/pages/'.$url.'.php');//Página encontrada e incluída no site
+		}else{
+			include('src/pages/404.php');//Página não encontrada
+		}
+		include('src/pages/footer.php');
+	?>
 </body>
 </html>
